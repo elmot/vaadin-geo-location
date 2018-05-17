@@ -1,5 +1,9 @@
-# <vaadin-geo-location> element
+# &lt;vaadin-geo-location&gt; element
 
+##HTML5 Geolocation web-component
+
+![html5](https://www.w3.org/html/logo/badge/html5-badge-h-device-semantics.png "HTML5 Powered with Device Access, and Semantics")
+![WebComponent](https://raw.githubusercontent.com/webcomponents/webcomponents-icons/master/logo/logo_64x64.png) 
 ## Running the tutorial code
 
 You'll need to install some command-line tools to manage dependencies and to run the demo.
