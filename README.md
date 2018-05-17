@@ -9,5 +9,15 @@ You'll need to install some command-line tools to manage dependencies and to run
 2.  Install `bower` and the Polymer CLI:
 
         npm install -g bower polymer-cli
+3. Look at the [example](https://github.com/elmot/vaadin-geo-location/blob/master/demo/demo-element.html)
+ 
+##API
 
-##TBD
+```html
+<vaadin-geo-location on-location="handleLocation" on-error="handleOops"
+    high-accuracy timeout="50" max-age="15" watch></vaadin-geo-location>
+
+```
+### See also
+
+https://github.com/elmot/vaadin-geo-location-flow
