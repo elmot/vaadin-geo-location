@@ -23,14 +23,13 @@
                     maxAge: Number
                 };
             }
+            static get observers() {
+                return [
+                    '_start(highAccuracy, watch, timeout, maxAge)'
+                ]
+            }
 
             // noinspection JSUnusedGlobalSymbols
-            ready() {
-                super.ready();
-                if (this.watch) {
-                    this._start(navigator.geolocation.watchPosition)
-                }
-            }
 
             constructor() {
                 super();
@@ -38,23 +37,33 @@
 
             // noinspection JSUnusedGlobalSymbols
             request() {
-                this._start(navigator.geolocation.getCurrentPosition)
+                this._start()
             }
 
-            _start(method) {
-                let me = this;
-                let pos = function (p) {
-                    me.dispatchEvent(new CustomEvent('location', {detail: p}));
-                };
-                let err = function (e) {
-                    me.dispatchEvent(new CustomEvent('error', {detail: e}));
-                };
-                let options = {
-                    enableHighAccuracy: this.highAccuracy,
-                    timeout: this.timeout,
-                    maximumAge: this.maxAge
-                };
-                method.apply(navigator.geolocation,[pos, err, options]);
+            _start(highAccuracy, watch, timeout, maxAge) {
+                if(this._id) {
+                    navigator.geolocation.clearWatch(this._id);
+                    this._id = null
+                }
+                if(watch) {
+                    let me = this;
+                    let pos = function (p) {
+                        me.location = p;
+                        me.error = null;
+                        me.dispatchEvent(new CustomEvent('location', {detail: p}));
+                    };
+                    let err = function (e) {
+                        me.location = null;
+                        me.error = e;
+                        me.dispatchEvent(new CustomEvent('error', {detail: e}));
+                    };
+                    let options = {
+                        enableHighAccuracy: highAccuracy,
+                        timeout: timeout,
+                        maximumAge: maxAge
+                    };
+                    this._id = navigator.geolocation.watchPosition(pos, err, options);
+                }
             }
 
         }
