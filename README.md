@@ -6,17 +6,7 @@
 ![html5](https://www.w3.org/html/logo/badge/html5-badge-h-device-semantics.png "HTML5 Powered with Device Access, and Semantics")
 ![WebComponent](https://raw.githubusercontent.com/webcomponents/webcomponents-icons/master/logo/logo_64x64.png) 
 
-<!--
-```
-<custom-element-demo>
-  <template>
-    <link rel="import" href="vaadin-geo-location.html">
-    <link rel="import" href="demo/demo-element.html">
-    <next-code-block></next-code-block>
-  </template>
-</custom-element-demo>
-```
--->
+
 ```html
     <vaadin-geo-location 
         on-location="handleLocation"
@@ -36,13 +26,6 @@ You'll need to install some command-line tools to manage dependencies and to run
         npm install -g bower polymer-cli
 3. Look at the [example](https://github.com/elmot/vaadin-geo-location/blob/master/demo/demo-element.html)
  
-## API
-
-```html
-<vaadin-geo-location on-location="handleLocation" on-error="handleOops"
-    high-accuracy timeout="50" max-age="15" watch></vaadin-geo-location>
-
-```
 ### See also
 
 https://github.com/elmot/vaadin-geo-location-flow
