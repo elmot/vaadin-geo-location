@@ -1,5 +1,4 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../vaadin-geo-location.html">
+<link rel="import" href="vaadin-geo-location/vaadin-geo-location.html">
 
 
 <dom-module id="demo-element">
@@ -23,7 +22,7 @@
     <vaadin-geo-location on-location="handleLocation"
                         on-error="handleOops"
                         high-accuracy="true"
-                        timeout="50"
+                        timeout="140000"
                         max-age="15"
                         watch="true"
                          id="vgl"
