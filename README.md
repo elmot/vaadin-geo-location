@@ -5,6 +5,26 @@
 
 ![html5](https://www.w3.org/html/logo/badge/html5-badge-h-device-semantics.png "HTML5 Powered with Device Access, and Semantics")
 ![WebComponent](https://raw.githubusercontent.com/webcomponents/webcomponents-icons/master/logo/logo_64x64.png) 
+
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="vaadin-geo-location.html">
+    <link rel="import" href="demo/demo-element.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+    <vaadin-geo-location 
+        on-location="handleLocation"
+        on-error="handleOops"
+        high-accuracy="true"
+        watch="true">
+    </vaadin-geo-location>
+```
 ## Running the tutorial code
 
 You'll need to install some command-line tools to manage dependencies and to run the demo.
