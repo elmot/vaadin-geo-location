@@ -1,3 +1,6 @@
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/geo-location-addon)
+[![Stars on Vaadin Directory](https://img.shields.io/vaadin-directory/star/geo-location-addon.svg)](https://vaadin.com/directory/component/geo-location-addon)
+
 # &lt;vaadin-geo-location&gt; element
 
 ## HTML5 Geolocation web-component
